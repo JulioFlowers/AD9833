@@ -1,7 +1,9 @@
 #include "AD9833.h"
-#include "stm32g4xx_hal.h"
+
 
 /* ==== Bits del registro de control ==== */
+/*Descripción en Tabla 6; <<Description of Bits in the Control Register >>, del Datasheet*/
+/*Description in Table 6; "Description of Bits in the Control Register", of the Datasheet*/
 #define AD_B28       13
 #define AD_HLB       12
 #define AD_FSELECT   11

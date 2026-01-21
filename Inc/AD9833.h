@@ -1,7 +1,7 @@
 #ifndef AD9833_H
 #define AD9833_H
 
-
+#include "stm32g4xx_hal.h"
 #include <stdint.h>
 #include <stdbool.h>
 
@@ -9,6 +9,8 @@
 #define AD9833_SPI_HANDLE_TYPE SPI_HandleTypeDef
 #endif
 
+//Modo de generación de onda.
+//Wave generation mode.
 typedef enum {
 AD_MODE_OFF = 0,
 AD_MODE_SINE,
@@ -17,24 +19,24 @@ AD_MODE_SQUARE1,
 AD_MODE_SQUARE2
 } AD9833_Mode_t;
 
+
 typedef enum {
 AD_CHAN_0 = 0,
 AD_CHAN_1 = 1
 } AD9833_Channel_t;
 
+//SPI Handler
 typedef struct {
 AD9833_SPI_HANDLE_TYPE *hspi;
 GPIO_TypeDef *cs_port;
 uint16_t cs_pin;
 uint32_t mclk_hz;
 
-
 uint16_t regCtl;
 uint32_t regFreq[2];
 uint16_t phase[2];
 float freq[2];
 AD9833_Mode_t mode;
-
 
 } AD9833_Handle_t;
 
