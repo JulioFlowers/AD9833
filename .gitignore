@@ -1,0 +1,27 @@
+# ==== STM32CubeIDE / Eclipse ====
+.settings/
+.project
+.cproject
+.mxproject
+
+# ==== Build folders ====
+Debug/
+Release/
+
+# ==== CubeIDE autos ====
+*.launch
+*.map
+*.list
+*.o
+*.d
+*.su
+
+# ==== Backup / temp ====
+*~
+*.bak
+*.swp
+*.tmp
+
+# ==== OS ====
+.DS_Store
+Thumbs.db
